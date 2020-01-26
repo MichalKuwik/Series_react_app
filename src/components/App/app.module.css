@@ -1,0 +1,12 @@
+.app {
+  text-align: center;
+}
+
+.app_header {
+  height: 20vh;
+  background: #dddd;
+}
+
+.app_title{
+  color:#000;
+}
