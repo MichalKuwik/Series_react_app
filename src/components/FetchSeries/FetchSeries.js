@@ -1,4 +1,5 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
+import Loader from '../Loader/Loader';
 
 const base_url = 'http://api.tvmaze.com'; 
 
@@ -6,7 +7,7 @@ function FetchSeries(){
 
   const [series,setSeries] = useState([]);
   const [seriesName,setSeriesName] = useState('');
-  const [isFetching,setIsFetching] = useState(false)
+  const [isFetching,setIsFetching] = useState(false);
 
   const chandleInputChange = (e) => {
 
@@ -33,6 +34,20 @@ function FetchSeries(){
           />
       </div>
 
+      {!isFetching && series.length === 0 && seriesName.trim() === ''
+      &&
+      <p>Proszę wpisać nazwę szukanego serialu</p>
+      }
+      {
+        !isFetching && series.length === 0 && seriesName.trim() !== '' && 
+        <p>Brak szukanej wartości</p>
+      }
+      {
+        isFetching && <Loader />
+      }
+      {/* {
+        !isFetching && <SeriesList series={series}/> 
+      } */}
 
     </div>
   )
