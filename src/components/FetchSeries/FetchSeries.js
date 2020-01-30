@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import Loader from '../Loader/Loader';
+import SeriesList from '../SeriesList/SeriesList';
 
 const base_url = 'http://api.tvmaze.com'; 
 
@@ -45,9 +46,9 @@ function FetchSeries(){
       {
         isFetching && <Loader />
       }
-      {/* {
+      {
         !isFetching && <SeriesList series={series}/> 
-      } */}
+      }
 
     </div>
   )
