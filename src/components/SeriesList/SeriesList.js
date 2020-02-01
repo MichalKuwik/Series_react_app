@@ -1,4 +1,5 @@
 import React from 'react';
+import SeriesListItem from '../SeriesList/SeriesListItem/SeriesListItem';
 
 function SeriesList({series}){
 
@@ -6,7 +7,7 @@ function SeriesList({series}){
   return(
     <div style={{marginLeft:0}}>
         {series.map(series => (
-          // <SeriesListItem  key={series.show.id} series={series}/>
+          <SeriesListItem  key={series.show.id} series={series}/>
         ))}
       </div>
   )
