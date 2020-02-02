@@ -1,8 +1,8 @@
 import React from 'react';
 import srcLoader from './loader.gif';
 
-function Loader(){
 
+function Loader(){
   return(
     <div>
       <img 
