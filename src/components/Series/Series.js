@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
-import SeriesList from '../../components/SeriesList/SeriesList';
-import Loader from '../../Loader/Loader';
+import SeriesList from '../SeriesList/SeriesList';
+import Loader from '../Loader/Loader';
 
 
 
