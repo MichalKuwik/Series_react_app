@@ -6,10 +6,6 @@ function SingleSeries(props){
 
   const [show,setShow] = useState(null);
   
-
- 
-
-  
   let history = useHistory();
 
   // console.log(show)
