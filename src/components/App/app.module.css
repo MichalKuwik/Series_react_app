@@ -1,5 +1,6 @@
 .app {
   text-align: center;
+  margin-top:2rem;
 }
 
 .App_title {
@@ -8,7 +9,8 @@
 }
 
 .svg_wrapper{
-  width:30%;
+  width:60vh;
+  height: 20vh;
   
 }
 

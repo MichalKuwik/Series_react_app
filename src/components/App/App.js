@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../Main/Main';
 import styles from './app.module.css';
-import allImg from '../../assets/img/soda-pop.png'
+import allImg from '../../assets/img/logo-new2.png'
 
 
 
@@ -19,10 +19,6 @@ function App() {
         <img src={allImg} alt="" className={styles.img}/>
 
         </div>
-
-        <h1 className={styles.App_title}>
-          Twoje seriale
-        </h1>
       </header>
      <Main />
     </div>
