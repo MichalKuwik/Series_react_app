@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../Main/Main';
 import styles from './app.module.css';
-import allImg from '../../assets/img/logo-new2.png'
+import allImg from '../../assets/img/logo-3.png'
 
 
 
