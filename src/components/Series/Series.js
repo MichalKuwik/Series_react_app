@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
 import SeriesList from '../SeriesList/SeriesList';
 import Loader from '../Loader/Loader';
-
-
+import allImg from '../../assets/img/logo-2.png'
+import styles from '../App/app.module.css';
 
 
 
@@ -30,7 +30,14 @@ function Series(){
 
   return(
     <div>
-      
+      <header className={styles.App_header}>
+        
+        <div className={styles.svg_wrapper}>
+        
+        <img src={allImg} alt="" className={styles.img}/>
+
+        </div>
+      </header>
       <div>
         <input 
           type="text" 

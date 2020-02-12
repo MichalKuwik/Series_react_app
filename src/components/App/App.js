@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../Main/Main';
 import styles from './app.module.css';
-import allImg from '../../assets/img/logo-3.png'
+import allImg from '../../assets/img/logo-2.png'
 
 
 
@@ -12,14 +12,7 @@ function App() {
   return (
     
     <div className={styles.app}>
-      <header className={styles.App_header}>
-        
-        <div className={styles.svg_wrapper}>
-        
-        <img src={allImg} alt="" className={styles.img}/>
-
-        </div>
-      </header>
+      
      <Main />
     </div>
   );

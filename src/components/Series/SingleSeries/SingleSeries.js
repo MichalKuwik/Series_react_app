@@ -33,12 +33,12 @@ function SingleSeries(props){
         && 
       <div>
         <p>{show.name}</p>
+        <p><img src={show.image.medium} alt="img"/></p>
         <p>Data Premiery: {reversePremiere(show.premiered)}r.</p>
         <p>Ocena: {show.rating.average}</p>
         <p>Liczba odcinków: {show._embedded.episodes.length}</p>
         <p>Język: {show.language}</p>
         <a href={show.officialSite}>Oficjalna strona serialu</a>
-        <p><img src={show.image.medium} alt="img"/></p>
         <p>Gatunki: {show.genres.map(item => (
           <b key={item} style={{marginLeft:'1rem'}}>{item}</b>
         ))}</p>  
