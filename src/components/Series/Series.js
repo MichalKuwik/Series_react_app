@@ -4,6 +4,8 @@ import Loader from '../Loader/Loader';
 import allImg from '../../assets/img/logo-2.png'
 import styles from '../App/app.module.css';
 
+import './series.css';
+
 
 
 function Series(){
@@ -38,13 +40,19 @@ function Series(){
 
         </div>
       </header>
-      <div>
+
+      <div className="input-wrapper">
         <input 
           type="text" 
           onChange={onInputChange}
           value={seriesName}
+          placeholder=""
+          className="input"
           />
+        <label className="label">wpisz nazwę</label>
+        <span className="focus-border"></span>  
       </div>
+
       {!isFetching && series.length === 0 && seriesName.trim() === ''
       &&
       <p>Proszę wpisać nazwę szukanego serialu</p>
