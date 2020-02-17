@@ -11,10 +11,12 @@
     width:100%;
     border: 0; 
     padding: 4px 0;
-    font-size:1.5rem; 
+    font-size:1.2rem; 
     border-bottom: 2px solid #fff; 
     background-color: transparent;
     color:#fff;
+    font-family:'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
   }
     .input:focus ~ .focus-border{
       width: 100%; 
@@ -49,4 +51,8 @@
       height: 2px; 
       background-color: yellow; 
       transition: 0.4s;
+    }
+
+    p{
+      color:rgb(194,24,7);
     }
