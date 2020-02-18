@@ -1,22 +1,30 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import tapeImg from '../../assets/img/tape.png';
+
 const SeriesListItem = ({series}) => {
 
   return(
     <div style={{marginTop:'2rem'}}>
+      
       <Link
        to={`/series/${series.show.id}`}
-       style={{textDecoration:'none',color:'yellow'}}
+       style={{textDecoration:'none',color:'white',display:'flex',alignItems:'center',justifyContent:'center'}}
        >
-      {series.show.name}
+         <img src={tapeImg} alt="" style={imgStyle}/>
+         {series.show.name}
       </Link>
-      <img src={series.show.image} alt="" />
-      
     </div>
     ) 
 
   }
+
+const imgStyle = {
+  width:'30px',
+  height:'30px',
+  marginRight:'1rem'
+}
 
 
 function SeriesList({series}){
