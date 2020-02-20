@@ -3,11 +3,7 @@
 body {
   margin: 0;
   background:#333132;
-  font-family: 'Montserrat', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

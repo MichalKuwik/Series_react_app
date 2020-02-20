@@ -3,6 +3,8 @@ import SeriesList from '../SeriesList/SeriesList';
 import Loader from '../Loader/Loader';
 import allImg from '../../assets/img/logo-2.png'
 import styles from '../App/app.module.css';
+import './series.css';
+import broomImg from '../../assets/img/broom.png';
 
 import './series.css';
 
@@ -41,6 +43,7 @@ function Series(){
         </div>
       </header>
 
+    
       <div className="input-wrapper">
         <input 
           type="text" 
@@ -53,13 +56,18 @@ function Series(){
         <span className="focus-border"></span>  
       </div>
 
+      <button className="resetBtn">
+        <img src={broomImg} alt="" className="broom_img" style={{width:'100%',height:'100%'}}/>
+      </button>
+      
+
       {!isFetching && series.length === 0 && seriesName.trim() === ''
       &&
-      <p>Proszę wpisać nazwę szukanego serialu</p>
+      <p style={{color:'red'}}>Proszę wpisać nazwę szukanego serialu!</p>
       }
       {
         !isFetching && series.length === 0 && seriesName.trim() !== '' && 
-        <p>Brak szukanej wartości</p>
+        <p style={{color:'red'}}>Brak szukanej wartości!</p>
       }
       {
         isFetching && <Loader />
@@ -72,5 +80,6 @@ function Series(){
     
   )
 }
+
 
 export default Series;

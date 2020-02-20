@@ -6,6 +6,8 @@
 }
   .label{
     color:#fff;
+    font-family: 'Montserrat';
+    
   }
   .input{
     width:100%;
@@ -15,8 +17,8 @@
     border-bottom: 2px solid #fff; 
     background-color: transparent;
     color:#fff;
-    font-family:'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    font-family:'Montserrat';
+    font-weight: 300;
   }
     .input:focus ~ .focus-border{
       width: 100%; 
@@ -56,3 +58,19 @@
     p{
       color:#fff;
     }
+
+    .resetBtn{
+      background:transparent;
+      width:60px;
+      height:60px;
+      border:2px solid white;
+      padding:7px;
+      border-radius:50%;
+      margin-top:1rem;
+      transition: all 0.5s ease-in-out;
+    }
+    .resetBtn:hover{
+     background: #222021;
+    }
+
+  
