@@ -15,6 +15,7 @@ function Series(){
   const [series,setSeries] = useState([]);
   const [seriesName,setseriesName] = useState('');
   const [isFetching,setisFetching] = useState(false);
+  const [anim,setAnim] = useState(false);
 
   // console.log(series)
 
@@ -56,8 +57,14 @@ function Series(){
         <span className="focus-border"></span>  
       </div>
 
-      <button className="resetBtn">
-        <img src={broomImg} alt="" className="broom_img" style={{width:'100%',height:'100%'}}/>
+      <button 
+        className="resetBtn"
+        onClick={() => {setseriesName('');setSeries([])}}
+        >
+        <img 
+          src={broomImg} 
+          alt="" 
+          style={{width:'100%',height:'100%'}}/>
       </button>
       
 
