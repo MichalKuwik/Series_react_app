@@ -6,7 +6,13 @@ import tapeImg from '../../assets/img/tape.png';
 const SeriesListItem = ({series}) => {
 
   return(
-    <div style={{marginTop:'2rem'}}>
+    <div style={
+      {marginTop:'2rem',
+      background:'rgba(0,0,0,0.2)',
+      padding:'1rem',
+      minWidth:'20%',
+     
+      }}>
       
       <Link
        to={`/series/${series.show.id}`}
@@ -32,7 +38,7 @@ function SeriesList({series}){
   
   return(
     
-      <div style={{marginLeft:0,marginTop:'3rem'}}>
+      <div style={{marginLeft:0,marginTop:'1rem',display:'flex',flexDirection:'column',alignItems:'center'}}>
         {series.map(series => (
           <SeriesListItem  key={series.show.id} series={series}/>
         ))}
