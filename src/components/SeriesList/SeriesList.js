@@ -7,11 +7,12 @@ const SeriesListItem = ({series}) => {
 
   return(
     <div style={
-      {marginTop:'2rem',
-      background:'rgba(0,0,0,0.2)',
-      padding:'1rem',
-      minWidth:'20%',
-     
+      {
+          marginTop:'2rem',
+        background:'rgba(255,255,255,0.1)',
+        padding:'1rem',
+        minWidth:'20%',
+        // border:'1px solid #ff6666'    
       }}>
       
       <Link
