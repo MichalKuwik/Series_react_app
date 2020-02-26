@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../Main/Main';
 import styles from './app.module.css';
-import allImg from '../../assets/img/logo-2.png'
+import ScrollUpButton from 'react-scroll-up-button';
 
 
 
@@ -14,6 +14,10 @@ function App() {
     <div className={styles.app}>
       
      <Main />
+     <ScrollUpButton 
+      style={{background:'none'}}
+      
+      />
     </div>
   );
 }

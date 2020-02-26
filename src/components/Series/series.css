@@ -20,6 +20,12 @@
     font-family:'Montserrat';
     font-weight: 300;
   }
+
+  .input:focus { 
+    outline: none !important;
+    
+}
+
     .input:focus ~ .focus-border{
       width: 100%; 
       transition: 0.4s; 

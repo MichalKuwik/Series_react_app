@@ -15,7 +15,7 @@ function Series(){
   const [series,setSeries] = useState([]);
   const [seriesName,setseriesName] = useState('');
   const [isFetching,setisFetching] = useState(false);
-  const [anim,setAnim] = useState(false);
+  
 
   // console.log(series)
 

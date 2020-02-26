@@ -1,19 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import styles from './SeriesList.module.css';
 
 import tapeImg from '../../assets/img/tape.png';
 
 const SeriesListItem = ({series}) => {
 
   return(
-    <div style={
-      {
-          marginTop:'2rem',
-        background:'rgba(255,255,255,0.1)',
-        padding:'1rem',
-        minWidth:'20%',
-        // border:'1px solid #ff6666'    
-      }}>
+    <div className={styles.series}>
       
       <Link
        to={`/series/${series.show.id}`}
