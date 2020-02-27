@@ -5,7 +5,6 @@ import allImg from '../../assets/img/move-logo.png'
 import styles from '../App/app.module.css';
 import './series.css';
 import broomImg from '../../assets/img/broom.png';
-
 import './series.css';
 
 
@@ -80,7 +79,7 @@ function Series(){
         isFetching && <Loader />
       }
       {
-        !isFetching && <SeriesList series={series}/> 
+        !isFetching &&  <SeriesList series={series}/> 
       }
       
     </div>
