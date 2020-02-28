@@ -6,7 +6,7 @@ import styles from '../App/app.module.css';
 import './series.css';
 import broomImg from '../../assets/img/broom.png';
 import './series.css';
-
+import Error_text from '../Error_text/Error_text';
 
 
 function Series(){
@@ -69,11 +69,11 @@ function Series(){
 
       {!isFetching && series.length === 0 && seriesName.trim() === ''
       &&
-      <p style={{color:'red'}}>Proszę wpisać nazwę szukanego serialu!</p>
+        <Error_text>Proszę wpisać nazwę szukanego serialu!</Error_text>
       }
       {
         !isFetching && series.length === 0 && seriesName.trim() !== '' && 
-        <p style={{color:'red'}}>Brak szukanej wartości!</p>
+        <Error_text>Brak szukanej wartości!</Error_text>
       }
       {
         isFetching && <Loader />
