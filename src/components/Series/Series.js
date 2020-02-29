@@ -1,10 +1,10 @@
+/* eslint-disable react/jsx-pascal-case */
 import React,{useState} from 'react';
 import SeriesList from '../SeriesList/SeriesList';
+import Button from '../Button/Button';
 import Loader from '../Loader/Loader';
 import allImg from '../../assets/img/move-logo.png'
 import styles from '../App/app.module.css';
-import './series.css';
-import broomImg from '../../assets/img/broom.png';
 import './series.css';
 import Error_text from '../Error_text/Error_text';
 
@@ -56,17 +56,6 @@ function Series(){
         <span className="focus-border"></span>  
       </div>
 
-      <button 
-        className="resetBtn"
-        onClick={() => {setseriesName('');setSeries([])}}
-        >
-        <img 
-          src={broomImg} 
-          alt="" 
-          style={{width:'100%',height:'100%'}}/>
-      </button>
-      
-
       {!isFetching && series.length === 0 && seriesName.trim() === ''
       &&
         <Error_text>Proszę wpisać nazwę szukanego serialu!</Error_text>
@@ -75,6 +64,12 @@ function Series(){
         !isFetching && series.length === 0 && seriesName.trim() !== '' && 
         <Error_text>Brak szukanej wartości!</Error_text>
       }
+
+      <Button 
+        setSeries={setSeries} 
+        setseriesName={setseriesName}
+      />
+
       {
         isFetching && <Loader />
       }

@@ -1,0 +1,13 @@
+.resetBtn{
+  background:transparent;
+  width:60px;
+  height:60px;
+  border:2px solid #ff6666;
+  padding:7px;
+  border-radius:50%;
+  margin-top:1rem;
+  transition: all 0.5s ease-in-out;
+}
+.resetBtn:hover{
+ background: #222021;
+}
