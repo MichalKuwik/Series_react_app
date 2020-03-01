@@ -2,6 +2,7 @@
 import React,{useState} from 'react';
 import SeriesList from '../SeriesList/SeriesList';
 import Button from '../Button/Button';
+import Input from '../Input/Input';
 import Loader from '../Loader/Loader';
 import allImg from '../../assets/img/move-logo.png'
 import styles from '../App/app.module.css';
@@ -43,19 +44,11 @@ function Series(){
         </div>
       </header>
 
-    
-      <div className="input-wrapper">
-        <input 
-          type="text" 
-          onChange={onInputChange}
-          value={seriesName}
-          placeholder=""
-          className="input"
-          />
-        <label className="label">wpisz nazwę</label>
-        <span className="focus-border"></span>  
-      </div>
-
+      <Input 
+        onInputChange={onInputChange}
+        seriesName={seriesName}
+      />
+      
       {!isFetching && series.length === 0 && seriesName.trim() === ''
       &&
         <Error_text>Proszę wpisać nazwę szukanego serialu!</Error_text>
