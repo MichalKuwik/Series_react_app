@@ -3,11 +3,11 @@ import React,{useState} from 'react';
 import SeriesList from '../SeriesList/SeriesList';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
+import Header from '../Header/Header';
 import Loader from '../Loader/Loader';
-import allImg from '../../assets/img/move-logo.png'
-import styles from '../App/app.module.css';
 import './series.css';
 import Error_text from '../Error_text/Error_text';
+
 
 
 function Series(){
@@ -35,14 +35,8 @@ function Series(){
 
   return(
     <div>
-      <header className={styles.App_header}>
-        
-        <div className={styles.svg_wrapper}>
-        
-        <img src={allImg} alt="" className={styles.img}/>
-
-        </div>
-      </header>
+      
+      <Header />
 
       <Input 
         onInputChange={onInputChange}
