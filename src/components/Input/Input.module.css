@@ -64,3 +64,15 @@
     p{
       color:#fff;
     }
+
+    @media(max-width:770px){
+      .input_wrapper{
+        width:50%;
+      }
+    }
+
+    @media(max-width:450px){
+      .input_wrapper{
+        width:90%;
+      }
+    }

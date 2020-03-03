@@ -3,7 +3,7 @@ import React from 'react';
 function Error_text({children}){
 
   return(
-  <p style={{color:'red'}}>{children}</p>
+  <p style={{color:'red',fontSize:'0.85rem'}}>{children}</p>
   )
 }
 
