@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './Error_text.module.css';
 
 function Error_text({children}){
 
   return(
-  <p style={{color:'red',fontSize:'0.85rem'}}>{children}</p>
+  <p className={styles.info}>{children}</p>
   )
 }
 

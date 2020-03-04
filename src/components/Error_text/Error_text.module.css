@@ -1,0 +1,15 @@
+.info{
+  color:red;
+  font-size:0.85rem;
+  animation: animErr 1s ease-in-out both;
+}
+
+
+@keyframes animErr{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
