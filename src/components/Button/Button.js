@@ -2,7 +2,9 @@ import React from 'react';
 import broomImg from '../../assets/img/broom.png';
 import styles from './Button.module.css';
 
-function Button({setSeries,setseriesName}){
+function Button({setSeries,setseriesName,btnRet}){
+
+  
 
   return(
    

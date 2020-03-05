@@ -16,7 +16,7 @@ function App() {
      <Main />
      <ScrollUpButton 
       style={{background:'none'}}
-      
+      ShowAtPosition={10}
       />
     </div>
   );
