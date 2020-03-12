@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import styles from './SeriesList.module.css';
-
 import tapeImg from '../../assets/img/tape.png';
 
 const SeriesListItem = ({series}) => {

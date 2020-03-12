@@ -9,7 +9,6 @@ import './series.css';
 import Error_text from '../Error_text/Error_text';
 
 
-
 function Series(){
 
   const [series,setSeries] = useState([]);
@@ -37,7 +36,7 @@ function Series(){
     <div>
       
       <Header />
-
+      
       <Input 
         onInputChange={onInputChange}
         seriesName={seriesName}

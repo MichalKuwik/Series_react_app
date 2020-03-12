@@ -15,7 +15,7 @@ p{
 }
 
 .frame{
-  border:1px solid rgb(255, 102, 102);
+  border:1px solid #ff6666;
   padding:5px;
   border-radius: 50%;
   margin-left:10px;
