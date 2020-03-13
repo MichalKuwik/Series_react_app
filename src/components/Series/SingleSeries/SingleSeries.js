@@ -16,8 +16,6 @@ function SingleSeries(props){
   let history = useHistory();
 
   // console.log(show)
-  
-
   useEffect(() => {
     const fetchData = () => {
       const {id} = props.match.params;
