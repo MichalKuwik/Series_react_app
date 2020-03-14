@@ -34,7 +34,6 @@ function Series(){
 
   return(
     <div>
-      
       <Header />
       
       <Input 
@@ -67,6 +66,5 @@ function Series(){
     
   )
 }
-
 
 export default Series;

@@ -5,8 +5,7 @@ import styles from './Button.module.css';
 function Button({setSeries,setseriesName}){
 
   return(
-   
-    <button 
+   <button 
           className={styles.resetBtn}
           onClick={() => {setseriesName('');setSeries([])}}
           >
@@ -16,7 +15,6 @@ function Button({setSeries,setseriesName}){
             style={{width:'100%',height:'100%'}}
           />
       </button>
-    
   )
 }
 
