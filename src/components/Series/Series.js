@@ -8,14 +8,12 @@ import Loader from '../Loader/Loader';
 import './series.css';
 import Error_text from '../Error_text/Error_text';
 
-
 function Series(){
 
   const [series,setSeries] = useState([]);
   const [seriesName,setseriesName] = useState('');
   const [isFetching,setisFetching] = useState(false);
   
-
   // console.log(series)
 
   const onInputChange = (e) => {
