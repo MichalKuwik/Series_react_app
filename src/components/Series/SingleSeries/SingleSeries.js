@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import axios from 'axios';
 import { Tween } from 'react-gsap';
 import Loader from '../../Loader/Loader';
 import { useHistory } from "react-router-dom";
@@ -16,16 +17,20 @@ function SingleSeries(props){
   let history = useHistory();
 
   // console.log(show)
-  useEffect(() => {
-    const fetchData = () => {
-      const {id} = props.match.params;
+
+
   
-      fetch(`http://api.tvmaze.com/shows/${id}?embed=episodes`)
-      .then(res => res.json())
-      .then(data => {
-        setShow(data)
-      })
-      .then(err => console.log(err))
+
+  useEffect(() => {
+   
+    async function fetchData() {
+      const {id} = props.match.params;
+      try {
+        const singleResponse = await axios.get(`http://api.tvmaze.com/shows/${id}?embed=episodes`);
+        setShow(singleResponse.data)
+      } catch (error) {
+        console.error(error);
+      }
     }
     fetchData()
   },[])

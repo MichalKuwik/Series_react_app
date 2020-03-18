@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-pascal-case */
 import React,{useState} from 'react';
+import axios from 'axios';
 import SeriesList from '../SeriesList/SeriesList';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
@@ -18,16 +19,27 @@ function Series(){
 
   const onInputChange = (e) => {
 
-    setseriesName(e.target.value);
+    let searchValue = e.target.value;
+    setseriesName(searchValue);
     setisFetching(true);
 
-    fetch(`http://api.tvmaze.com/search/shows?q=${e.target.value}`)
-    .then(res => res.json())
-    .then(data => {
-      setSeries(data)
-      setisFetching(false)
-    })
-    .then(err => console.log(err))
+    async function fetcAllhData() {
+      try {
+        const responseAll = await axios.get(`http://api.tvmaze.com/search/shows?q=${searchValue}`);
+        setSeries(responseAll.data)
+        setisFetching(false)
+      } catch (error) {
+        console.error(error);
+      }
+    }
+      fetcAllhData();
+    // fetch(`http://api.tvmaze.com/search/shows?q=${searchValue}`)
+    // .then(res => res.json())
+    // .then(data => {
+    //   setSeries(data)
+    //   setisFetching(false)
+    // })
+    // .then(err => console.log(err))
   }
 
   return(
