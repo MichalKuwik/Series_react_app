@@ -33,13 +33,6 @@ function Series(){
       }
     }
       fetcAllhData();
-    // fetch(`http://api.tvmaze.com/search/shows?q=${searchValue}`)
-    // .then(res => res.json())
-    // .then(data => {
-    //   setSeries(data)
-    //   setisFetching(false)
-    // })
-    // .then(err => console.log(err))
   }
 
   return(
