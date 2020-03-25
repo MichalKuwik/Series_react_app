@@ -2,10 +2,11 @@ import React from 'react';
 import broomImg from '../../assets/img/broom.png';
 import styles from './Button.module.css';
 
+
 function Button({setSeries,setseriesName}){
 
   return(
-   <button 
+      <button 
           className={styles.resetBtn}
           onClick={() => {setseriesName('');setSeries([])}}
           >

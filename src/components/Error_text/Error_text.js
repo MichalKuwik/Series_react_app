@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Error_text.module.css';
+import { ErrorText } from './Error_text_styled';
 
 function Error_text({children}){
 
   return(
-  <p className={styles.info}>{children}</p>
+  <ErrorText>{children}</ErrorText>
   )
 }
 

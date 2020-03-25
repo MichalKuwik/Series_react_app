@@ -2,6 +2,7 @@ import React from 'react';
 import { Tween} from 'react-gsap';
 import styles from './Input.module.css';
 
+
 const Input = ({onInputChange,seriesName}) => {
 
 

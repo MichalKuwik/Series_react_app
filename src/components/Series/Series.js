@@ -8,13 +8,15 @@ import Header from '../Header/Header';
 import Loader from '../Loader/Loader';
 import './series.css';
 import Error_text from '../Error_text/Error_text';
+import { SeriesContext } from '../../context/SeriesContext';
+
+
 
 function Series(){
 
   const [series,setSeries] = useState([]);
   const [seriesName,setseriesName] = useState('');
   const [isFetching,setisFetching] = useState(false);
-  
   // console.log(series)
 
   const onInputChange = (e) => {
@@ -23,7 +25,7 @@ function Series(){
     setseriesName(searchValue);
     setisFetching(true);
 
-    async function fetcAllhData() {
+    async function fetchAllData() {
       try {
         const responseAll = await axios.get(`http://api.tvmaze.com/search/shows?q=${searchValue}`);
         setSeries(responseAll.data)
@@ -32,13 +34,12 @@ function Series(){
         console.error(error);
       }
     }
-      fetcAllhData();
+      fetchAllData();
   }
 
   return(
     <div>
       <Header />
-      
       <Input 
         onInputChange={onInputChange}
         seriesName={seriesName}
@@ -52,19 +53,18 @@ function Series(){
         !isFetching && series.length === 0 && seriesName.trim() !== '' && 
         <Error_text>Brak szukanej wartości!</Error_text>
       }
-
       <Button 
         setSeries={setSeries} 
         setseriesName={setseriesName}
       />
-
       {
         isFetching && <Loader />
       }
+      <SeriesContext.Provider value={series}>
       {
-        !isFetching &&  <SeriesList series={series}/> 
+        !isFetching &&  <SeriesList/> 
       }
-      
+      </SeriesContext.Provider>
     </div>
     
   )
