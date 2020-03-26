@@ -10,8 +10,6 @@ import './series.css';
 import Error_text from '../Error_text/Error_text';
 import { SeriesContext } from '../../context/SeriesContext';
 
-
-
 function Series(){
 
   const [series,setSeries] = useState([]);
