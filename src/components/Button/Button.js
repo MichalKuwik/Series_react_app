@@ -1,13 +1,11 @@
 import React from 'react';
 import broomImg from '../../assets/img/broom.png';
-import styles from './Button.module.css';
-
+import { ButtonStyled } from './ButtonStyled';
 
 function Button({setSeries,setseriesName}){
 
   return(
-      <button 
-          className={styles.resetBtn}
+      <ButtonStyled 
           onClick={() => {setseriesName('');setSeries([])}}
           >
           <img 
@@ -15,7 +13,7 @@ function Button({setSeries,setseriesName}){
             alt="" 
             style={{width:'100%',height:'100%'}}
           />
-      </button>
+      </ButtonStyled>
   )
 }
 
