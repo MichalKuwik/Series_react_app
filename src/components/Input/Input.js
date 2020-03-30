@@ -1,21 +1,17 @@
 import React from 'react';
-import { Tween} from 'react-gsap';
-import styles from './Input.module.css';
+import { Tween } from 'react-gsap';
+import { InputWrapper,InputComponent,Label,Span } from './Input_styled';
 
-
-const Input = ({onInputChange,seriesName}) => {
-
-
-  return(
+const Input = ({onInputChange,seriesName}) => (
     
-        <div className={styles.input_wrapper}>
+        <InputWrapper>
             <Tween
               from={{ 
                 width:0,
                 delay:0.5
               }}
             >
-              <input 
+              <InputComponent 
                 type="text" 
                 onChange={onInputChange}
                 value={seriesName}
@@ -25,12 +21,11 @@ const Input = ({onInputChange,seriesName}) => {
             </Tween>
 
             <Tween from={{y: '-10px',opacity:0,delay:0.7}}>  
-              <label className="label">wpisz nazwę</label>
+              <Label>wpisz nazwę</Label>
             </Tween>
-            <span className="focus-border"></span>  
-        </div>
+            <Span></Span>  
+        </InputWrapper>
     
-  )
-}
+  );
 
 export default Input;
