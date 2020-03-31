@@ -28,12 +28,25 @@ export const InputComponent = styled.input`
     background-color: transparent;
     color:#fff;
     font-weight: 300;
+
+    & ~ ${Label}{
+      position: absolute;
+      left: 0;
+      width: 100%; 
+      top:20%; 
+      color: #fff;
+      font-size:1.3rem;
+      font-weight: 200; 
+      transition: 0.3s;
+      z-index: -1;
+      letter-spacing: 0.5px;
+    }
     
     &::focus{
       outline: none !important;
     }
     &:focus ~ ${Label}{
-        top: -16px; 
+        top: -50%; 
         font-size: 12px; 
         color: #ff6666; 
         transition: 0.3s;

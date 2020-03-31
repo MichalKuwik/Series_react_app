@@ -6,7 +6,6 @@ import Button from '../Button/Button';
 import Input from '../Input/Input';
 import Header from '../Header/Header';
 import Loader from '../Loader/Loader';
-import './series.css';
 import Error_text from '../Error_text/Error_text';
 import { SeriesContext } from '../../context/SeriesContext';
 
