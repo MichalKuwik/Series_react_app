@@ -10,6 +10,20 @@ import translateImg from '../../../assets/img/translating.png';
 import returnBtn from '../../../assets/img/returnArrow.png';
 import sadFace from '../../../assets/img/sad.png';
 
+import styled from 'styled-components';
+
+const Title = styled.p`
+  margin:0;
+  padding:0;
+  color:#ffff;
+  font-size:2rem;
+  font-weight: 300;
+`;
+
+const Acapit = styled.p`
+  color:#fff;
+`
+
 function SingleSeries(props){
 
   const [show,setShow] = useState(null);
@@ -17,9 +31,6 @@ function SingleSeries(props){
   let history = useHistory();
 
   // console.log(show)
-
-
-  
 
   useEffect(() => {
    
@@ -48,43 +59,71 @@ function SingleSeries(props){
       <div>
         <Tween
           staggerFrom={{
-          opacity: 0,
-          cycle: {
-            rotationX: [90],
-            transformOrigin: ['50% top -100', '50% bottom 100']
-          },
-        }}
-        duration={1}
-        stagger={0.1}
-      >
+            opacity: 0,
+            cycle: {
+              rotationX: [90],
+              transformOrigin: ['50% top -100', '50% bottom 100']
+            },
+          }}
+            duration={1}
+            stagger={0.1}
+        >
             <Tween
               from={{ y:-20,scale:0 }}
             >
-            <p className={styles.title} style={{margin:0,padding:0}}>{show.name}</p>
+              <Title>{show.name}
+              </Title>
              </Tween>  
-            <p className={styles.imgMainCont}> <img className={styles.imgMain} src={show.image.medium} alt="img"/></p>
-            <p>Data Premiery: <br /> <br /> <span style={{border:'1px solid #ff6666',padding:'5px 10px', borderRadius:'20px'}}>
+            <Acapit> 
+                <img 
+                     src={show.image.medium} 
+                     alt="img"/>
+            </Acapit>
+            <Acapit>Data Premiery: <br /> <br /> 
+              <span 
+                style={{border:'1px solid #ff6666',padding:'5px 10px', borderRadius:'20px'}}>
               {show.premiered ? reversePremiere(show.premiered) : <b style={{fontWeight:'300'}}>brak danych z api</b>}r.
-              </span></p>
+              </span>
+            </Acapit>
             <hr />
-            <p>Ocena: <br />
-              {show.rating.average ? <b>{show.rating.average}</b> : <b style={{fontWeight:'300'}}>brak danych z api</b>}
-              <img style={{width:'20px',height:'20px',margin:'10px 0 0 5px'}} src={show.rating.average ? starRating : sadFace} alt="" />
-            </p>
+            <Acapit>Ocena: <br />
+              {show.rating.average ? <b>{show.rating.average}</b> : <b 
+                style={{fontWeight:'300'}}>brak danych z api
+              </b>}
+                <img 
+                  style={{width:'20px',height:'20px',margin:'10px 0 0 5px'}} 
+                  src={show.rating.average ? starRating : sadFace} 
+                  alt="" 
+                />
+            </Acapit>
             <hr />
-            <p className={styles.countP}>Liczba odcinków:<span className={styles.frame}>{show._embedded.episodes.length}</span></p>
+            <Acapit>Liczba odcinków:
+              <span 
+                className={styles.frame}>{show._embedded.episodes.length}
+              </span>
+            </Acapit>
             <hr />
-            <p className={styles.language}>Język: {show.language} <img style={{width:'35px',height:'30px',marginLeft:'10px'}} src={translateImg} alt=""/></p>
+            <Acapit>Język: {show.language} 
+                <img 
+                  style={{width:'35px',height:'30px',marginLeft:'10px'}} 
+                  src={translateImg} 
+                  alt=""/>
+            </Acapit>
             <hr />
-            <p className={styles.linkP}>
+            <Acapit 
+              className={styles.linkP}>
               Oficjalna strona serialu: <br />
               <a 
                 href={show.officialSite} 
                 target="_blank"
                 rel="noopener noreferrer"
-                ><img style={{width:'50px',height:'40px',marginTop:'10px'}} src={httpsIcon} alt=""/>
+                >
+                  <img 
+                    style={{width:'50px',height:'40px',marginTop:'10px'}} 
+                    src={httpsIcon} 
+                    alt=""/>
               </a>
-            </p>
+            </Acapit>
        </Tween> 
       </div>
       }
@@ -92,7 +131,11 @@ function SingleSeries(props){
       <button
         className={styles.btnReturn} 
         onClick={() => history.goBack()}>
-        <img className={styles.imgRet} src={returnBtn} alt='' />
+          <img 
+            className={styles.imgRet} 
+            src={returnBtn} 
+            alt='' 
+          />
       </button>
     </div>
   )
