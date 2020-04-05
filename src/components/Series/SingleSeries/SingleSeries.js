@@ -8,47 +8,8 @@ import starRating from '../../../assets/img/rating.png';
 import translateImg from '../../../assets/img/translating.png';
 import returnBtn from '../../../assets/img/returnArrow.png';
 import sadFace from '../../../assets/img/sad.png';
+import { Title,Acapit,Frame,HrLine,ReturnBtn,Img } from './SingleSeries_styled';
 
-import styled from 'styled-components';
-
-const Title = styled.p`
-  margin:0;
-  padding:0;
-  color:#ffff;
-  font-size:2rem;
-  font-weight: 300;
-`;
-
-const Acapit = styled.p`
-  color:#fff;
-  text-decoration: ${(link) => 'none'};
-`
-
-const Frame = styled.span`
-  border:1px solid #ff6666;
-  padding:5px;
-  border-radius: 50%;
-  margin-left:10px;
-`
-const HrLine = styled.hr`
-  border-width: 0.5px;
-  width:20%;
-  opacity:0.2;
-`
-
-const ReturnBtn = styled.button`
-  background: transparent;
-  border:none;
-  width:60px;
-  height: 60px;
-`
-
-const Img = styled.img`
-  width:${(https) => '50px'};
-  height:${(https) => '40px'};
-  margin-top:${(https) => '10px'};
-  height: 100%;
-`
 
 function SingleSeries(props){
 
