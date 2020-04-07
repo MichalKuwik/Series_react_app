@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Tween } from 'react-gsap';
 import { InputWrapper,InputComponent,Label,Span } from './Input_styled';
 
@@ -27,5 +28,10 @@ const Input = ({onInputChange,seriesName}) => (
         </InputWrapper>
     
   );
+
+  Input.propTypes = {
+    onInputChange: PropTypes.func,
+    seriesName: PropTypes.string
+  };
 
 export default Input;

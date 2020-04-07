@@ -2,8 +2,7 @@ import React from 'react';
 import srcLoader from './loader.gif';
 
 
-function Loader(){
-  return(
+const Loader = () => (
     <div>
       <img 
         src={srcLoader} 
@@ -12,6 +11,6 @@ function Loader(){
         />
     </div>
   )
-}
+
 
 export default Loader;
