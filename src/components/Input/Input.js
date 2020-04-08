@@ -26,7 +26,6 @@ const Input = ({onInputChange,seriesName}) => (
             </Tween>
             <Span></Span>  
         </InputWrapper>
-    
   );
 
   Input.propTypes = {
