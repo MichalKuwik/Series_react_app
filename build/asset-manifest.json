@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/Series_react_app/static/js/main.99ff573c.chunk.js",
+    "main.js.map": "/Series_react_app/static/js/main.99ff573c.chunk.js.map",
+    "runtime-main.js": "/Series_react_app/static/js/runtime-main.e2f87d0b.js",
+    "runtime-main.js.map": "/Series_react_app/static/js/runtime-main.e2f87d0b.js.map",
+    "static/js/2.2872a428.chunk.js": "/Series_react_app/static/js/2.2872a428.chunk.js",
+    "static/js/2.2872a428.chunk.js.map": "/Series_react_app/static/js/2.2872a428.chunk.js.map",
+    "index.html": "/Series_react_app/index.html",
+    "precache-manifest.e4441b08500461c683e36f9d4aa63108.js": "/Series_react_app/precache-manifest.e4441b08500461c683e36f9d4aa63108.js",
+    "service-worker.js": "/Series_react_app/service-worker.js",
+    "static/js/2.2872a428.chunk.js.LICENSE": "/Series_react_app/static/js/2.2872a428.chunk.js.LICENSE",
+    "static/media/icon.png": "/Series_react_app/static/media/icon.e374cd5c.png",
+    "static/media/loader.gif": "/Series_react_app/static/media/loader.6e29f5a8.gif",
+    "static/media/move-logo.png": "/Series_react_app/static/media/move-logo.41655e84.png",
+    "static/media/rating.png": "/Series_react_app/static/media/rating.cc1f1c45.png",
+    "static/media/returnArrow.png": "/Series_react_app/static/media/returnArrow.0e5c26ea.png",
+    "static/media/sad.png": "/Series_react_app/static/media/sad.d78f0ed6.png",
+    "static/media/tape.png": "/Series_react_app/static/media/tape.1c2bd4cd.png",
+    "static/media/translating.png": "/Series_react_app/static/media/translating.7746e4c4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2f87d0b.js",
+    "static/js/2.2872a428.chunk.js",
+    "static/js/main.99ff573c.chunk.js"
+  ]
+}
